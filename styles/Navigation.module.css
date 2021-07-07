@@ -1,0 +1,82 @@
+
+.navigation {
+    --color-hover-bar: rgb(198, 154, 255);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+  }
+  .navigation .menuUl {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .navigation .menuUl .menuLi {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    transition: all 1s ease;
+  }
+  .navigation .menuUl .menuLi .barHover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    font-size: 21px;
+    transform: scaleX(0);
+    color: white;
+    background-color: var(--color-hover-bar);
+  }
+  .navigation .menuUl .menuLi .menuA{
+    text-decoration: none;
+    color: #727272;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .navigation .menuUl .menuLi .menuA .contentSpan{
+    text-decoration: none;
+    color: #727272;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  .navigation .menuUl .menuLi .menuA .contentSpan .text {
+    transition: transform 0.5s ease;
+  }
+  .navigation .menuUl .menuLi:hover .barHover {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    transition: transform 0.7s ease;
+    transform: scaleX(1);
+    background-color: var(--color-hover-bar);
+  }
+  .navigation .menuUl .menuLi:hover .menuA .contentSpan{
+    text-decoration: none;
+    transition: transform 0.7s ease;
+    transform: translateX(calc(var(--total) * -15px)) translateY(calc((var(--total) * -15px) / 2));
+  }
+  .navigation .menuUl .menuLi:hover .menuA .contentSpan .text {
+    font-weight: normal;
+    position: absolute;
+    transition: transform 0.7s ease, font-weight 0.7s ease;
+    transform: translateX(calc(var(--i) * 35px)) translateY(calc(var(--random) * (var(--total) * 4px))) rotateX(calc(var(--i) * 7deg)) rotateY(calc(var(--i) * 7deg));
+  }
+  
